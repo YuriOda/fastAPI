@@ -13,8 +13,8 @@ async def root():
 async def user_me():
     return {"user_id": "current user"}
 
-# {}で囲むと引数として設定できる
 @app.get("/user/{user_id}")
+# {}で囲むと引数として設定できる
 async def user_id(user_id: int):
     return {"user_id": user_id}
 
